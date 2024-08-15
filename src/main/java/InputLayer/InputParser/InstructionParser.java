@@ -10,7 +10,7 @@ public class InstructionParser {
     private String instructions;
 
     public InstructionParser(String instructions) {
-        if(instructions != null || !instructions.isBlank() ) {
+        if(instructions != null && !instructions.isBlank() ) {
             this.instructions = instructions.toUpperCase();
         }else{
             this.instructions = " ";
