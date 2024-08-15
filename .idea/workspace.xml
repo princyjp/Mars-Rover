@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a5d3ffd-ec23-4e59-9168-f26f5b4b2f2a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/InstructionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/InstructionParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/InstructionParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.InstructionParserTest.executor": "Run",
     "JUnit.InstructionParserTest.parseStringToInstruction.executor": "Run",
+    "JUnit.InstructionParserTest.test_InstructionParser_MixedCharacters.executor": "Run",
+    "JUnit.InstructionParserTest.test_InstructionParser_invalidInput.executor": "Run",
     "JUnit.InstructionParserTest.test_InstructionParser_validLowerCase.executor": "Run",
     "JUnit.InstructionParserTest.test_InstructionParser_validMixedCase.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -57,8 +60,8 @@
       <recent name="InputLayer.InputParser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InstructionParserTest.test_InstructionParser_MixedCharacters">
-    <configuration name="InstructionParserTest.parseStringToInstruction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InstructionParserTest">
+    <configuration name="InstructionParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mars-Rover" />
       <extension name="coverage">
         <pattern>
@@ -68,8 +71,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
       <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.InstructionParserTest" />
-      <option name="METHOD_NAME" value="parseStringToInstruction" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,6 +87,22 @@
       <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
       <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.InstructionParserTest" />
       <option name="METHOD_NAME" value="test_InstructionParser_MixedCharacters" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InstructionParserTest.test_InstructionParser_invalidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mars-Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InputLayer.InputParser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
+      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.InstructionParserTest" />
+      <option name="METHOD_NAME" value="test_InstructionParser_invalidInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,10 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InstructionParserTest" />
+        <item itemvalue="JUnit.InstructionParserTest.test_InstructionParser_invalidInput" />
         <item itemvalue="JUnit.InstructionParserTest.test_InstructionParser_MixedCharacters" />
         <item itemvalue="JUnit.InstructionParserTest.test_InstructionParser_validMixedCase" />
         <item itemvalue="JUnit.InstructionParserTest.test_InstructionParser_validLowerCase" />
-        <item itemvalue="JUnit.InstructionParserTest.parseStringToInstruction" />
       </list>
     </recent_temporary>
   </component>
