@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class InstructionParser {
-    private String instructions;
+    private final String instructions;
 
     public InstructionParser(String instructions) {
         if (instructions != null && !instructions.isBlank()) {
