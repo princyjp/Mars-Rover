@@ -12,9 +12,22 @@ import static org.junit.jupiter.api.Assertions.*;
 class InstructionParserTest {
 
     @Test
-    @DisplayName("Return a valid instruction queue for a valid input string")
-    void parseStringToInstruction() {
+    @DisplayName("Return a valid instruction queue for a valid uppercase string")
+    void test_InstructionParser_validUpperCase() {
         String instructions = "LLMR";
+        var instructionparser = new InstructionParser(instructions);
+        var result = instructionparser.parseStringToInstruction();
+        Queue<Instruction> expected = new LinkedList<>();
+        expected.add(Instruction.L);
+        expected.add(Instruction.L);
+        expected.add(Instruction.M);
+        expected.add(Instruction.R);
+        assertEquals(expected,result);
+    }
+    @Test
+    @DisplayName("Return a valid instruction queue for a valid lowercase string")
+    void test_InstructionParser_validLowerCase() {
+        String instructions = "llmr";
         var instructionparser = new InstructionParser(instructions);
         var result = instructionparser.parseStringToInstruction();
         Queue<Instruction> expected = new LinkedList<>();
