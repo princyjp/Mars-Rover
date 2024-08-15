@@ -53,14 +53,26 @@ class InstructionParserTest {
     @Test
     @DisplayName("Return a valid instruction queue for a input string with valid and invalid characters")
     void test_InstructionParser_MixedCharacters() {
-        String instructions = "lLBmRa";
-        var instructionparser = new InstructionParser(instructions);
-        var result = instructionparser.parseStringToInstruction();
+        String instructions1 = "lLBmRa";
+        String instructions2 = "lLBmRa@";
+        String instructions3 = "l1LBm23Ra@";
+        var instructionparser1 = new InstructionParser(instructions1);
+        var instructionparser2 = new InstructionParser(instructions2);
+        var instructionparser3 = new InstructionParser(instructions3);
+        var result1 = instructionparser1.parseStringToInstruction();
+        var result2 = instructionparser2.parseStringToInstruction();
+        var result3 = instructionparser3.parseStringToInstruction();
         Queue<Instruction> expected = new LinkedList<>();
         expected.add(Instruction.L);
         expected.add(Instruction.L);
         expected.add(Instruction.M);
         expected.add(Instruction.R);
-        assertEquals(expected,result);
+
+        assertAll(
+                ()-> assertEquals(expected,result1),
+                ()-> assertEquals(expected,result2),
+                ()-> assertEquals(expected,result3)
+        );
+
     }
 }
