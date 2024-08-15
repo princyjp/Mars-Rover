@@ -50,4 +50,17 @@ class InstructionParserTest {
         expected.add(Instruction.R);
         assertEquals(expected,result);
     }
+    @Test
+    @DisplayName("Return a valid instruction queue for a input string with valid and invalid characters")
+    void test_InstructionParser_MixedCharacters() {
+        String instructions = "lLBmRa";
+        var instructionparser = new InstructionParser(instructions);
+        var result = instructionparser.parseStringToInstruction();
+        Queue<Instruction> expected = new LinkedList<>();
+        expected.add(Instruction.L);
+        expected.add(Instruction.L);
+        expected.add(Instruction.M);
+        expected.add(Instruction.R);
+        assertEquals(expected,result);
+    }
 }
