@@ -75,4 +75,28 @@ class InstructionParserTest {
         );
 
     }
+    @Test
+    @DisplayName("Return a empty instruction queue for invalid input")
+    void test_InstructionParser_invalidInput() {
+        String instructions1 = null;
+        String instructions2 = "";
+        String instructions3 = "  ";
+        String instructions4 = "abc4@j";
+        var instructionparser1 = new InstructionParser(instructions1);
+        var instructionparser2 = new InstructionParser(instructions2);
+        var instructionparser3 = new InstructionParser(instructions3);
+        var instructionparser4 = new InstructionParser(instructions4);
+        var result1 = instructionparser1.parseStringToInstruction();
+        var result2 = instructionparser2.parseStringToInstruction();
+        var result3 = instructionparser3.parseStringToInstruction();
+        var result4 = instructionparser4.parseStringToInstruction();
+        Queue<Instruction> expected = new LinkedList<>();
+        assertAll(
+                ()-> assertEquals(expected,result1),
+                ()-> assertEquals(expected,result2),
+                ()-> assertEquals(expected,result3),
+                ()-> assertEquals(expected,result4)
+        );
+
+    }
 }
