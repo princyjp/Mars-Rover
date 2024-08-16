@@ -6,7 +6,7 @@ import InputLayer.Position;
 
 import java.util.Queue;
 
-public class Rover {
+public class Rover{
     private final Position startPosition;
     private Position currentPosition;
     private Queue<Instruction> instructions;
@@ -15,7 +15,7 @@ public class Rover {
         this.startPosition = startPosition;
         this.currentPosition = startPosition;
         this.instructions = instructions;
-//        runInstruction();
+        runInstruction();
     }
 
     private void runInstruction() {
@@ -24,17 +24,21 @@ public class Rover {
             if(i == Instruction.L || i == Instruction.R){
                 rotate(i);
             } else if (i == Instruction.M) {
-                move();
+              synchronized (this){
+                  move();
+              };
             }
         }
     }
 
     public void move(){
-        switch (currentPosition.getFacing()) {
-            case N -> currentPosition.setY(getCurrentPosition().getY() + 1);
-            case E -> currentPosition.setX(getCurrentPosition().getX() + 1);
-            case W -> currentPosition.setX(getCurrentPosition().getX() - 1);
-            case S -> currentPosition.setY(getCurrentPosition().getY() - 1);
+        if(!isPositionOutOfBound && isPositionFree) {
+            switch (currentPosition.getFacing()) {
+                case N -> currentPosition.setY(getCurrentPosition().getY() + 1);
+                case E -> currentPosition.setX(getCurrentPosition().getX() + 1);
+                case W -> currentPosition.setX(getCurrentPosition().getX() - 1);
+                case S -> currentPosition.setY(getCurrentPosition().getY() - 1);
+            }
         }
 
     }
@@ -78,4 +82,5 @@ public class Rover {
     public void setInstructions(Queue<Instruction> instructions) {
         this.instructions = instructions;
     }
+
 }
