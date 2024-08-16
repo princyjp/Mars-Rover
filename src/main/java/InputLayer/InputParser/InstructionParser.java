@@ -17,7 +17,7 @@ public class InstructionParser {
         }
     }
 
-    public Queue<Instruction> parseStringToInstruction() {
+    public Queue<Instruction> parseToInstruction() {
         Queue<Instruction> instructionQueue = new LinkedList<>();
         if (!instructions.isBlank()) {
             extractInstruction(instructionQueue);
