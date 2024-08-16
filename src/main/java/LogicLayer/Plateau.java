@@ -10,13 +10,23 @@ public class Plateau {
 
     public Plateau(PlateauSize plateauSize) {
         this.plateauSize = plateauSize;
+        printPlateau();
     }
 
-    public boolean isPositionOUtOfBounds(){
+    private void printPlateau() {
+        for (int i = 0; i <= plateauSize.getMaxX(); i++) {
+            for (int j = 0; j <= plateauSize.getMaxY(); j++) {
+                System.out.print(0 + " ");
+            }
+            System.out.print("\n");
+        }
+    }
 
+    public boolean isPositionOutOfBounds(){
+    return true;
     }
     public boolean isPositionEmpty(){
-
+    return true;
     }
 
     public PlateauSize getPlateauSize() {
