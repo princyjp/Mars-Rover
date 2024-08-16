@@ -4,10 +4,12 @@ import InputLayer.CompassDirection;
 import InputLayer.Position;
 
 public class PositionParser {
-private String input;
+private final String input;
+public Position position;
 
     public PositionParser(String input) {
         this.input = input;
+        position = parseToPosition();
     }
 
     private Position parseToPosition(){
@@ -16,7 +18,7 @@ private String input;
         int y = 0;
         CompassDirection compassDirection = CompassDirection.N;
         if(input != null && !input.isBlank()) {
-            if (input.matches("\\d+\\s\\d+\\s[nswe]\\b")){
+            if (input.matches("^\\d+\\s\\d+\\s[nsweNSWE]$")){
                 inputArray = input.split(" ");
                 x = Integer.parseInt(inputArray[0]);
                 y = Integer.parseInt(inputArray[1]);

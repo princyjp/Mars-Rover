@@ -5,11 +5,11 @@ import InputLayer.Instruction;
 
 public class CompassDirectionParser {
     private String input;
-    CompassDirection compassDirection;
+    CompassDirection compassDirection = CompassDirection.N;
 
     public CompassDirectionParser(String input) {
         this.input = input;
-        inputValidation();
+        compassDirection = inputValidation();
     }
     public CompassDirection inputValidation() {
 
