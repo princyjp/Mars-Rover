@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a5d3ffd-ec23-4e59-9168-f26f5b4b2f2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/InputParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/InstructionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/PlateauSizeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/PlateauSizeParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/PlateauSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/PlateauSize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/PlateauSizeParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/PlateauSizeParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LogicLayer/Rover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogicLayer/Rover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LogicLayer/RoverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LogicLayer/RoverTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +20,8 @@
       <list>
         <option value="Enum" />
         <option value="Record" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -59,6 +56,8 @@
     "JUnit.PositionParserTest.test_positionParser_invalidInput.executor": "Run",
     "JUnit.PositionParserTest.test_positionParser_validLowerCase.executor": "Run",
     "JUnit.PositionParserTest.test_positionParser_validUpperCase.executor": "Run",
+    "JUnit.RoverTest.test_move.executor": "Run",
+    "JUnit.RoverTest.test_rotate.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -74,10 +73,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="LogicLayer" />
       <recent name="InputLayer.InputParser" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.RoverTest.test_move">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="Mars-Rover" />
@@ -120,32 +120,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlateauSizeParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoverTest.test_move" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mars-Rover" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="InputLayer.InputParser.*" />
+          <option name="PATTERN" value="LogicLayer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
-      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.PlateauSizeParserTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="LogicLayer" />
+      <option name="MAIN_CLASS_NAME" value="LogicLayer.RoverTest" />
+      <option name="METHOD_NAME" value="test_move" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlateauSizeParserTest.test_positionParser_invalidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoverTest.test_rotate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mars-Rover" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="InputLayer.InputParser.*" />
+          <option name="PATTERN" value="LogicLayer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
-      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.PlateauSizeParserTest" />
-      <option name="METHOD_NAME" value="test_positionParser_invalidInput" />
+      <option name="PACKAGE_NAME" value="LogicLayer" />
+      <option name="MAIN_CLASS_NAME" value="LogicLayer.RoverTest" />
+      <option name="METHOD_NAME" value="test_rotate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverTest.test_move" />
+        <item itemvalue="JUnit.RoverTest.test_rotate" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.InstructionParserTest" />
         <item itemvalue="JUnit.InputLayer.InputParser in Mars-Rover" />
-        <item itemvalue="JUnit.PlateauSizeParserTest" />
-        <item itemvalue="JUnit.PlateauSizeParserTest.test_positionParser_invalidInput" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +184,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/LogicLayer/RoverTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
