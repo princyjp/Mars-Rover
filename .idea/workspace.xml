@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a5d3ffd-ec23-4e59-9168-f26f5b4b2f2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/PlateauSizeParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/InputParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/CompassDirectionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/CompassDirectionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/InstructionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/InstructionParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/PlateauSizeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/PlateauSizeParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/PositionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/InputParser/PositionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/InstructionParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/InstructionParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InputLayer/PlateauSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InputLayer/PlateauSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/PlateauSizeParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InputLayer/InputParser/PlateauSizeParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +23,8 @@
       <list>
         <option value="Enum" />
         <option value="Record" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,12 +42,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.InputLayer.InputParser in Mars-Rover.executor": "Run",
     "JUnit.InstructionParserTest.executor": "Run",
     "JUnit.InstructionParserTest.parseStringToInstruction.executor": "Run",
     "JUnit.InstructionParserTest.test_InstructionParser_MixedCharacters.executor": "Run",
     "JUnit.InstructionParserTest.test_InstructionParser_invalidInput.executor": "Run",
     "JUnit.InstructionParserTest.test_InstructionParser_validLowerCase.executor": "Run",
     "JUnit.InstructionParserTest.test_InstructionParser_validMixedCase.executor": "Run",
+    "JUnit.PlateauSizeParserTest.executor": "Run",
+    "JUnit.PlateauSizeParserTest.test_plateauSizeParser_decimalInput.executor": "Run",
+    "JUnit.PlateauSizeParserTest.test_plateauSizeParser_validInput.executor": "Run",
+    "JUnit.PlateauSizeParserTest.test_positionParser_invalidInput.executor": "Run",
+    "JUnit.PlateauSizeParserTest.test_positionParser_validUpperCase.executor": "Run",
     "JUnit.PositionParserTest.executor": "Coverage",
     "JUnit.PositionParserTest.test_positionParser_invalidInput.executor": "Run",
     "JUnit.PositionParserTest.test_positionParser_validLowerCase.executor": "Run",
@@ -70,7 +77,34 @@
       <recent name="InputLayer.InputParser" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PositionParserTest">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="Mars-Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InputLayer.InputParser in Mars-Rover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mars-Rover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InputLayer.InputParser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InstructionParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mars-Rover" />
       <extension name="coverage">
@@ -86,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PositionParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlateauSizeParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mars-Rover" />
       <extension name="coverage">
         <pattern>
@@ -95,13 +129,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
-      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.PositionParserTest" />
+      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.PlateauSizeParserTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PositionParserTest.test_positionParser_invalidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlateauSizeParserTest.test_positionParser_invalidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mars-Rover" />
       <extension name="coverage">
         <pattern>
@@ -110,40 +144,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
-      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.PositionParserTest" />
+      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.PlateauSizeParserTest" />
       <option name="METHOD_NAME" value="test_positionParser_invalidInput" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionParserTest.test_positionParser_validLowerCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mars-Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="InputLayer.InputParser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
-      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.PositionParserTest" />
-      <option name="METHOD_NAME" value="test_positionParser_validLowerCase" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionParserTest.test_positionParser_validUpperCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Mars-Rover" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="InputLayer.InputParser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="InputLayer.InputParser" />
-      <option name="MAIN_CLASS_NAME" value="InputLayer.InputParser.PositionParserTest" />
-      <option name="METHOD_NAME" value="test_positionParser_validUpperCase" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PositionParserTest" />
-        <item itemvalue="JUnit.PositionParserTest.test_positionParser_invalidInput" />
-        <item itemvalue="JUnit.PositionParserTest.test_positionParser_validLowerCase" />
-        <item itemvalue="JUnit.PositionParserTest.test_positionParser_validUpperCase" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.InstructionParserTest" />
+        <item itemvalue="JUnit.InputLayer.InputParser in Mars-Rover" />
+        <item itemvalue="JUnit.PlateauSizeParserTest" />
+        <item itemvalue="JUnit.PlateauSizeParserTest.test_positionParser_invalidInput" />
       </list>
     </recent_temporary>
   </component>
@@ -174,19 +176,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/InputLayer/InputParser/PositionParserTest.java</url>
-          <line>16</line>
-          <properties class="InputLayer.InputParser.PositionParserTest" method="test_positionParser_validUpperCase">
+          <url>file://$PROJECT_DIR$/src/test/java/InputLayer/InputParser/PlateauSizeParserTest.java</url>
+          <line>11</line>
+          <properties class="InputLayer.InputParser.PlateauSizeParserTest" method="test_plateauSizeParser_validInput">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Mars_Rover$PositionParserTest.ic" NAME="PositionParserTest Coverage Results" MODIFIED="1723800407029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Mars_Rover$PositionParserTest.ic" NAME="PositionParserTest Coverage Results" MODIFIED="1723801582141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>InputLayer.InputParser.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Mars_Rover$PlateauSizeParserTest_test_plateauSizeParser_decimalInput.ic" NAME="PlateauSizeParserTest.test_plateauSizeParser_decimalInput Coverage Results" MODIFIED="1723802712430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>InputLayer.InputParser.*</FILTER>
     </SUITE>
   </component>

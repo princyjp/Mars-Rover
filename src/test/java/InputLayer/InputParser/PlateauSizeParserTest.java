@@ -1,8 +1,6 @@
 package InputLayer.InputParser;
 
-import InputLayer.CompassDirection;
 import InputLayer.PlateauSize;
-import InputLayer.Position;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -17,8 +15,8 @@ class PlateauSizeParserTest {
         var result = new PlateauSizeParser(input).getPlateauSize();
 
         assertAll(
-                () -> assertEquals(1, result.getLength()),
-                () -> assertEquals(2, result.getBreadth())
+                () -> assertEquals(1, result.getMaxX()),
+                () -> assertEquals(2, result.getMaxY())
         );
 
     }
@@ -31,8 +29,8 @@ class PlateauSizeParserTest {
         var result = new PlateauSizeParser(input).getPlateauSize();
 
         assertAll(
-                () -> assertEquals(17, result.getLength()),
-                () -> assertEquals(2321, result.getBreadth())
+                () -> assertEquals(17, result.getMaxX()),
+                () -> assertEquals(2321, result.getMaxY())
         );
 //consider including decimal point value and rounding it up to nearest integer (1.,2.3)
     }
@@ -63,22 +61,16 @@ class PlateauSizeParserTest {
         PlateauSize result10 = new PlateauSizeParser(input10).getPlateauSize();
 
         assertAll(
-                () -> assertEquals(1, result1.getLength()), () -> assertEquals(1, result1.getBreadth()),
-
-                () -> assertEquals(1, result2.getLength()), () -> assertEquals(1, result2.getBreadth()),
-
-                () -> assertEquals(1, result3.getLength()), () -> assertEquals(1, result3.getBreadth()),
-
-                () -> assertEquals(1, result4.getLength()), () -> assertEquals(1, result4.getBreadth()),
-
-                () -> assertEquals(1, result5.getLength()), () -> assertEquals(1, result5.getBreadth()),
-
-                () -> assertEquals(1, result6.getLength()), () -> assertEquals(1, result6.getBreadth()),
-
-                () -> assertEquals(1, result7.getLength()), () -> assertEquals(1, result7.getBreadth()),
-                () -> assertEquals(1, result8.getLength()), () -> assertEquals(1, result8.getBreadth()),
-                () -> assertEquals(1, result9.getLength()), () -> assertEquals(1, result9.getBreadth()),
-                () -> assertEquals(1, result10.getLength()), () -> assertEquals(1, result10.getBreadth())
+                () -> assertEquals(1, result1.getMaxX()), () -> assertEquals(1, result1.getMaxY()),
+                () -> assertEquals(1, result2.getMaxX()), () -> assertEquals(1, result2.getMaxY()),
+                () -> assertEquals(1, result3.getMaxX()), () -> assertEquals(1, result3.getMaxY()),
+                () -> assertEquals(1, result4.getMaxX()), () -> assertEquals(1, result4.getMaxY()),
+                () -> assertEquals(1, result5.getMaxX()), () -> assertEquals(1, result5.getMaxY()),
+                () -> assertEquals(1, result6.getMaxX()), () -> assertEquals(1, result6.getMaxY()),
+                () -> assertEquals(1, result7.getMaxX()), () -> assertEquals(1, result7.getMaxY()),
+                () -> assertEquals(1, result8.getMaxX()), () -> assertEquals(1, result8.getMaxY()),
+                () -> assertEquals(1, result9.getMaxX()), () -> assertEquals(1, result9.getMaxY()),
+                () -> assertEquals(1, result10.getMaxX()), () -> assertEquals(1, result10.getMaxY())
 
         );
 

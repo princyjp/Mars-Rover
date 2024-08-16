@@ -2,20 +2,20 @@ package InputLayer;
 /*think about plateau being different shapes
  * creating plateaushape class  */
 public class PlateauSize {
-    private int length;
-    private int breadth;
+    private int maxX;
+    private int maxY;
 
-    public PlateauSize(int length, int breadth) {
-        this.length = length;
-        this.breadth = breadth;
+    public PlateauSize(int maxX, int maxY) {
+        this.maxX = maxX;
+        this.maxY = maxY;
     }
 
-    public int getLength() {
-        return length;
+    public int getMaxX() {
+        return maxX;
     }
 
-    public int getBreadth() {
-        return breadth;
+    public int getMaxY() {
+        return maxY;
     }
 
 }

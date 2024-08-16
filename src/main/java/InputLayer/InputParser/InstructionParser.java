@@ -7,26 +7,28 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class InstructionParser {
-    private final String instructions;
+    private final String input;
+    private Queue<Instruction> instructionQueue = new LinkedList<>();
 
-    public InstructionParser(String instructions) {
-        if (instructions != null && !instructions.isBlank()) {
-            this.instructions = instructions.toUpperCase();
+    public InstructionParser(String input) {
+        if (input != null && !input.isBlank()) {
+            this.input = input.toUpperCase();
+            instructionQueue = parseToInstruction();
         } else {
-            this.instructions = " ";
+            this.input = " ";
         }
     }
 
     public Queue<Instruction> parseToInstruction() {
-        Queue<Instruction> instructionQueue = new LinkedList<>();
-        if (!instructions.isBlank()) {
+
+        if (!input.isBlank()) {
             extractInstruction(instructionQueue);
         }
         return instructionQueue;
     }
 
     private void extractInstruction(Queue<Instruction> instructionQueue) {
-        for (char c : instructions.toCharArray()) {
+        for (char c : input.toCharArray()) {
             switch (c) {
                 case 'L':
                     instructionQueue.add(Instruction.L);
@@ -44,4 +46,8 @@ public class InstructionParser {
             }
         }
     }
+    public Queue<Instruction> getInstructionsQueue() {
+        return instructionQueue;
+    }
+
 }

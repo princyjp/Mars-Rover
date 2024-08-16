@@ -14,25 +14,26 @@ public class PlateauSizeParser {
 
     private PlateauSize parseToPlateauSize() {
         String[] inputArray;
-        int length = 1;
-        int breadth = 1;
+        int maxX = 1;
+        int maxY = 1;
+
 
         if(input != null && !input.isBlank()) {
 
             if (input.matches("^(\\d+(?:\\.\\d+)?)\\s(\\d+(?:\\.\\d+)?)$")){
                 inputArray = input.split(" ");
-                length = (int)Math.round(Double.parseDouble(inputArray[0]));
-                breadth= (int)Math.round(Double.parseDouble(inputArray[1]));
-                 if(length == 0 || breadth == 0){
-                     length = 1;
-                     breadth = 1;
+                maxX = (int)Math.round(Double.parseDouble(inputArray[0]));
+                maxY= (int)Math.round(Double.parseDouble(inputArray[1]));
+                 if(maxX == 0 || maxY == 0){
+                     maxX = 1;
+                     maxY = 1;
                  }
             }
             else{
                 System.out.println("Invalid Plateau size. Plateau size set to default value (1,1).");
             }
         }
-        return new PlateauSize(length,breadth);
+        return new PlateauSize(maxX,maxY);
     }
 
     public PlateauSize getPlateauSize() {
