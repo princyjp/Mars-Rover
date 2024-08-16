@@ -22,6 +22,19 @@ class PlateauSizeParserTest {
         );
 
     }
+    @Test
+    @DisplayName("Return a rounded up plateausize for decimal value")
+    void test_plateauSizeParser_decimalInput() {
+        String input = "1.5 2.2";
+
+        var result = new PlateauSizeParser(input).getPlateauSize();
+
+        assertAll(
+                () -> assertEquals(2, result.getLength()),
+                () -> assertEquals(2, result.getBreadth())
+        );
+
+    }
 
 
 }
