@@ -18,10 +18,16 @@ public class PlateauSizeParser {
         int breadth = 1;
 
         if(input != null && !input.isBlank()) {
-            if (input.matches("^\\d+\\s\\d+$")){
+            //consider including decimal point value and rounding it up to nearest integer (1.5,2.3)
+            // initial regex: "^\\d+\\s\\d+$"
+            // ^(\d+(?:\.\d+)?)\s(\d+(?:\.\d+)?)$
+            if (input.matches("^(\\d+(?:\\.\\d+)?)\\s(\\d+(?:\\.\\d+)?)$")){
                 inputArray = input.split(" ");
-                length = Integer.parseInt(inputArray[0]);
-                breadth= Integer.parseInt(inputArray[1]);
+                length = (int)Math.round(Double.parseDouble(inputArray[0]));
+                breadth= (int)Math.round(Double.parseDouble(inputArray[1]));
+            }
+            else{
+                System.out.println("Invalid Plateau size. Plateau size set to default value (1,1).");
             }
         }
         return new PlateauSize(length,breadth);
