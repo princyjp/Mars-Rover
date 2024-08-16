@@ -1,5 +1,6 @@
 package InputLayer;
-
+/*think about plateau being different shapes
+ * creating plateaushape class  */
 public class PlateauSize {
     private int length;
     private int breadth;
@@ -8,6 +9,13 @@ public class PlateauSize {
         this.length = length;
         this.breadth = breadth;
     }
-    /*think about plateau being different shapes
-    * creating plateaushape class  */
+
+    public int getLength() {
+        return length;
+    }
+
+    public int getBreadth() {
+        return breadth;
+    }
+
 }
