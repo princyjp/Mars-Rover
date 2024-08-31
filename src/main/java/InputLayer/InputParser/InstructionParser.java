@@ -13,7 +13,8 @@ public class InstructionParser {
     public InstructionParser(String input) {
         if (input != null && !input.isBlank()) {
             this.input = input.toUpperCase();
-            instructionQueue = parseToInstruction();
+//            instructionQueue = parseToInstruction();
+            extractInstruction();
         } else {
             this.input = " ";
         }
@@ -22,12 +23,12 @@ public class InstructionParser {
     public Queue<Instruction> parseToInstruction() {
 
         if (!input.isBlank()) {
-            extractInstruction(instructionQueue);
+            extractInstruction();
         }
         return instructionQueue;
     }
 
-    private void extractInstruction(Queue<Instruction> instructionQueue) {
+    private void extractInstruction() {
         for (char c : input.toCharArray()) {
             switch (c) {
                 case 'L':
