@@ -51,6 +51,37 @@ public class Rover {
 
     }
 
+    private void rotateRover() {
+
+        switch (currentPosition.getFacing()) {
+            case N -> {
+                if(currentPosition.getY() == plateau.getPlateauSize().getMaxY()) {
+                    currentPosition.setFacing(CompassDirection.S);
+            }else{
+                System.err.println("Rover at the edge facing North did not rotate.");
+            }}
+            case E -> {
+                if(currentPosition.getX() == plateau.getPlateauSize().getMaxX()) {
+                    currentPosition.setFacing(CompassDirection.S);
+                }else{
+                    System.err.println("Rover at the edge facing East did not rotate.");
+                }}
+            case W -> {
+                if(currentPosition.getX() == 0) {
+                    currentPosition.setFacing(CompassDirection.N);
+                }else{
+                    System.err.println("Rover at the edge facing West did not rotate.");
+                }}
+            case S ->  {
+                if(currentPosition.getY() == 0) {
+                    currentPosition.setFacing(CompassDirection.N);
+                }else{
+                    System.err.println("Rover at the edge facing South did not rotate.");
+                }}
+        }
+    }
+
+
     private Boolean isRoverAtTheEdge() {
 
         return currentPosition.getX() == 0 || currentPosition.getX() == plateau.getPlateauSize().getMaxX()
