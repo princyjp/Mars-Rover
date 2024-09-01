@@ -119,6 +119,49 @@ class RoverTest {
         assertEquals(2, rover.getCurrentPosition().getY());
         assertEquals(CompassDirection.S, rover.getCurrentPosition().getFacing());
     }
+    // Test cases for position (maxX,0) in all directions
+    @Test
+    @DisplayName("Return current position for start-position maxX,0,N")
+    void test_move_atMaxXZero_facingNorth() {
+        pos = new Position(maxX,0, CompassDirection.N);
+        rover = new Rover(plateau, pos, instructions);
+        rover.runInstruction();
+        assertEquals(2, rover.getCurrentPosition().getX());
+        assertEquals(1, rover.getCurrentPosition().getY());
+        assertEquals(CompassDirection.E, rover.getCurrentPosition().getFacing());
+    }
+    @Test
+    @DisplayName("Return current position for start-position maxX,0,S")
+    void test_move_atMaxXZero_facingSouth() {
+        pos = new Position(maxX,0, CompassDirection.S);
+        rover = new Rover(plateau, pos, instructions);
+        rover.runInstruction();
+        assertEquals(2, rover.getCurrentPosition().getX());
+        assertEquals(1, rover.getCurrentPosition().getY());
+        assertEquals(CompassDirection.E, rover.getCurrentPosition().getFacing());
+
+    }
+    @Test
+    @DisplayName("Return current position for start-position maxX,0,E")
+    void test_move_atMaxXZero_facingEast() {
+        pos = new Position(maxX,0, CompassDirection.E);
+        rover = new Rover(plateau, pos, instructions);
+        rover.runInstruction();
+        assertEquals(1, rover.getCurrentPosition().getX());
+        assertEquals(0, rover.getCurrentPosition().getY());
+        assertEquals(CompassDirection.N, rover.getCurrentPosition().getFacing());
+
+    }
+    @Test
+    @DisplayName("Return current position for start-position maxX,0,W")
+    void test_move_atMaxXZero_facingWest() {
+        pos = new Position(maxX,0, CompassDirection.W);
+        rover = new Rover(plateau, pos, instructions);
+        rover.runInstruction();
+        assertEquals(1, rover.getCurrentPosition().getX());
+        assertEquals(0, rover.getCurrentPosition().getY());
+        assertEquals(CompassDirection.N, rover.getCurrentPosition().getFacing());
+    }
     //Other
     @Test
     @DisplayName("Return current position for start-position 1,0,S")
