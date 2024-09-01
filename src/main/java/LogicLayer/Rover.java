@@ -2,6 +2,7 @@ package LogicLayer;
 
 import InputLayer.CompassDirection;
 import InputLayer.Instruction;
+import InputLayer.PlateauSize;
 import InputLayer.Position;
 
 import java.util.Queue;
@@ -10,6 +11,8 @@ public class Rover {
     private final Position startPosition;
     private Position currentPosition;
     private Queue<Instruction> instructions;
+    private Plateau plateau;
+
 
     public Rover(Position startPosition, Queue<Instruction> instructions) {
         this.startPosition = startPosition;
@@ -34,7 +37,10 @@ public class Rover {
     }
 
     public void move() {
+        if(isRoverAtTheEdge()) rotateRover();//if yes rotate
 //        if(!isPositionOutOfBound && isPositionFree) {
+
+
         switch (currentPosition.getFacing()) {
             case N -> currentPosition.setY(getCurrentPosition().getY() + 1);
             case E -> currentPosition.setX(getCurrentPosition().getX() + 1);
@@ -43,6 +49,12 @@ public class Rover {
         }
 //        }
 
+    }
+
+    private Boolean isRoverAtTheEdge() {
+
+        return currentPosition.getX() == 0 || currentPosition.getX() == plateau.getPlateauSize().getMaxX()
+                || currentPosition.getY() == 0 || currentPosition.getY() == plateau.getPlateauSize().getMaxY();
     }
 
     private void rotateRight() {
